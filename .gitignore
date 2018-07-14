@@ -8,6 +8,7 @@ Icon
 ### JetBrains template
 # User-specific stuff
 .idea/
+*.iml
 
 # IntelliJ
 out/
