@@ -1,6 +1,10 @@
 # Gallery App
 Sample of an application that displays a list of pictures.
 The pictures are stored with 3rd party provider that offers REST APIs to retrieve the pictures and it's details.
+
+- Pre-requisites:
+    - Maven: [Install Maven](https://maven.apache.org/install.html)
+    - Java 8
 - Building: `mvn clean install`
 
 This app is composed by 2 modules: **gallery-backend** and **gallery-frontend**.
@@ -16,6 +20,10 @@ The REST endpoints exposed by this module will be always preceeded by `/rest`, I
 - Access via REST client: `GET http://localhost:8080/rest/`
 
 ##gallery-frontend
-Angular 5 app that provides a nice UI to visualize the pictures gallery
+Angular 6 app that provides a nice UI to visualize the pictures gallery
 
-- Running: `npm run start`
+- Pre-requisites:
+    - Angular cli: `npm install -g @angular/cli`
+- Building: `npm install`
+- Running: `ng serve`
+
