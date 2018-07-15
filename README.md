@@ -14,10 +14,11 @@ This app is composed by 2 modules: **gallery-backend** and **gallery-frontend**.
 Spring-boot microservice that consumes rest services from a 3rd party and exposes REST endpoints to be consumed by the UI (gallery-frontend) 
 All the code for this microservice lives in the **gallery-backend** module.
 
-The REST endpoints exposed by this module will be always preceeded by `/rest`, I.E.: http://localhost:8080/rest/
+The REST endpoints exposed by this module will be always preceeded by `/rest`, 
+and the proper API documentation is available via [Swagger UI](http://localhost:8080/rest/swagger-ui.html)
 
 - Running: `mvn spring-boot:run`
-- Access via REST client: `GET http://localhost:8080/rest/`
+- REST API documentation: [Swagger UI](http://localhost:8080/rest/swagger-ui.html)
 
 ##gallery-frontend
 Angular 6 app that provides a nice UI to visualize the pictures gallery
