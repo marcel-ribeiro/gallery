@@ -24,6 +24,6 @@ Angular 6 app that provides a nice UI to visualize the pictures gallery
 
 - Pre-requisites:
     - Angular cli: `npm install -g @angular/cli`
-- Building: `npm install`
-- Running: `ng serve`
+- Building: `cd gallery-frontend` &&  `npm install` && `npm run build` &&  `cd ..` &&  `mvn install`
+- Running: `npm run start`
 

@@ -17,6 +17,7 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
+              "src/WEB-INF",
               {
                 "glob": "favicon.ico",
                 "input": "src",
