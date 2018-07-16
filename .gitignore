@@ -1,0 +1,33 @@
+### macOS template
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+
+### JetBrains template
+# User-specific stuff
+.idea/
+*.iml
+
+# IntelliJ
+out/
+
+
+### Maven template
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+
+
+### NPM
+dist/
+node_modules
+package-lock.json
+*.log
