@@ -13,6 +13,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.List;
 
+import static org.fest.assertions.Assertions.assertThat;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
 
@@ -76,7 +77,31 @@ public class PictureServiceImplTest {
         verify(pictureRestCosumerService).getPictureInfo(Mockito.eq("14"));
         verify(pictureRestCosumerService).getPictureInfo(Mockito.eq("15"));
         verify(pictureRestCosumerService, never()).getPictureInfo(Mockito.eq("16"));
+    }
 
+    @Test
+    public void shouldAddObjectsToTheList() throws Exception {
+        //given
+        PictureInfo pictureInfo = new PictureInfo();
+        Mockito.when(pictureRestCosumerService.getPictureInfo(Mockito.isA(String.class))).thenReturn(pictureInfo);
+
+        //when
+        List<PictureInfo> pictures = pictureService.findPictures(1, 1);
+
+        //then
+        assertThat(pictures).isNotEmpty();
+        assertThat(pictures).contains(pictureInfo);
+    }
+    @Test
+    public void shouldNotAddNullObjectsToTheList() throws Exception {
+        //given
+        Mockito.when(pictureRestCosumerService.getPictureInfo(Mockito.isA(String.class))).thenReturn(null);
+
+        //when
+        List<PictureInfo> pictures = pictureService.findPictures(1, 1);
+
+        //then
+        assertThat(pictures).isEmpty();
     }
 
 }

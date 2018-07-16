@@ -26,7 +26,10 @@ public class PictureServiceImpl implements PictureService {
         int end = start + size - 1;
         for (int currentId = start; currentId <= end; currentId++) {
             PictureInfo pictureInfo = pictureRestCosumerService.getPictureInfo(String.valueOf(currentId));
-            pictureInfoList.add(pictureInfo);
+            if(pictureInfo != null){
+                pictureInfoList.add(pictureInfo);
+
+            }
         }
 
         return pictureInfoList;
