@@ -1,5 +1,6 @@
 package com.ribeiro.gallery.api;
 
+import com.ribeiro.gallery.model.PictureInfo;
 import org.junit.Test;
 
 import static org.fest.assertions.Assertions.assertThat;

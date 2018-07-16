@@ -1,6 +1,6 @@
 package com.ribeiro.gallery.service.impl;
 
-import com.ribeiro.gallery.api.PictureInfo;
+import com.ribeiro.gallery.model.PictureInfo;
 import com.ribeiro.gallery.service.api.RestTemplateService;
 import org.junit.Test;
 import org.junit.runner.RunWith;

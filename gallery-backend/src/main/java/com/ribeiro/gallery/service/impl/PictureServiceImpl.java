@@ -1,6 +1,6 @@
 package com.ribeiro.gallery.service.impl;
 
-import com.ribeiro.gallery.api.PictureInfo;
+import com.ribeiro.gallery.model.PictureInfo;
 import com.ribeiro.gallery.service.api.PictureRestCosumerService;
 import com.ribeiro.gallery.service.api.PictureService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +26,10 @@ public class PictureServiceImpl implements PictureService {
         int end = start + size - 1;
         for (int currentId = start; currentId <= end; currentId++) {
             PictureInfo pictureInfo = pictureRestCosumerService.getPictureInfo(String.valueOf(currentId));
-            pictureInfoList.add(pictureInfo);
+            if(pictureInfo != null){
+                pictureInfoList.add(pictureInfo);
+
+            }
         }
 
         return pictureInfoList;

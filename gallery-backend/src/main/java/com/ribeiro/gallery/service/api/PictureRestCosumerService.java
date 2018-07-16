@@ -1,6 +1,6 @@
 package com.ribeiro.gallery.service.api;
 
-import com.ribeiro.gallery.api.PictureInfo;
+import com.ribeiro.gallery.model.PictureInfo;
 
 /**
  * Interface for the service that will communicate with the 3rd party provider and return the list of pictures available

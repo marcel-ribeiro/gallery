@@ -1,6 +1,6 @@
 package com.ribeiro.gallery.service.api;
 
-import com.ribeiro.gallery.api.PictureInfo;
+import com.ribeiro.gallery.model.PictureInfo;
 
 import java.util.List;
 
