@@ -1,6 +1,6 @@
 package com.ribeiro.gallery.controller.impl;
 
-import com.ribeiro.gallery.api.PictureInfo;
+import com.ribeiro.gallery.model.PictureInfo;
 import com.ribeiro.gallery.controller.api.PictureInfoController;
 import com.ribeiro.gallery.service.api.PictureService;
 import org.springframework.beans.factory.annotation.Autowired;

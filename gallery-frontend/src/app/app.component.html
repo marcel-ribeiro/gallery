@@ -12,19 +12,20 @@
   <h2>Here is the list of pictures you have uploaded:</h2>
 
 
-  <mat-grid-list cols="4" rowHeight="2:2">
-    <mat-grid-tile *ngFor="let item of pictures">
-      <div>
-        <div class="picture-image">
-          <img mat-card-image src="{{item?.imageUrl}}" alt="{{item?.name}}">
-          <div class="picture-details">
-            Id: {{item?.id}}
-            Name: {{item?.name}}
-            Created At: {{item?.createdAt}}
-            Image URL: {{item?.imageUrl}}
-          </div>
-        </div>
-      </div>
+  <mat-grid-list cols="4" rowHeight="4:7">
+    <mat-grid-tile *ngFor="let picture of pictures">
+
+      <mat-card *ngIf="picture">
+        <mat-card-title>{{picture?.name}}</mat-card-title>
+        <img mat-card-image src="{{picture?.imageUrl}}" alt="{{picture?.name}}">
+        <mat-card-content>
+          <div>Id: {{picture?.id}}</div>
+          <div>Name: {{picture?.name}}</div>
+          <div>Created At: {{picture?.createdAt}}</div>
+          <div>Image URL: {{picture?.imageUrl}}</div>
+        </mat-card-content>
+
+      </mat-card>
     </mat-grid-tile>
   </mat-grid-list>
 

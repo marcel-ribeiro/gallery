@@ -1,6 +1,6 @@
 package com.ribeiro.gallery.controller.api;
 
-import com.ribeiro.gallery.api.PictureInfo;
+import com.ribeiro.gallery.model.PictureInfo;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;

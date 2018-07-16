@@ -2,6 +2,9 @@
   text-align: center;
 }
 
+mat-card-content{
+  text-align: left;
+}
 
 .loadeing-spinner{
   position: relative;

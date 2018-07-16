@@ -1,4 +1,4 @@
-package com.ribeiro.gallery.api;
+package com.ribeiro.gallery.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.springframework.core.style.ToStringCreator;
