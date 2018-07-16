@@ -13,7 +13,11 @@ export class AppComponent implements OnInit {
   page: number;
   size: number;
   isThereMore: boolean;
+  isLoading: boolean;
 
+  color: string = 'primary';
+  mode: string = 'determinate';
+  value: number = 50;
   constructor(private pictureService: PictureService) {
 
   }
@@ -22,14 +26,16 @@ export class AppComponent implements OnInit {
     this.title = 'Picture Gallery App!';
     this.isThereMore = true;
     this.page = 0;
-    this.size = 5;
+    this.size = 8;
     this.pictures = [];
     this.displayMore();
   }
 
   setPictures(): void {
+    this.isLoading = true;
     this.pictureService.getPictures(this.page, this.size).subscribe((pictures: PictureInfo[]) => {
       this.pictures.push(...pictures);
+      this.isLoading = false;
     });
   }
 
