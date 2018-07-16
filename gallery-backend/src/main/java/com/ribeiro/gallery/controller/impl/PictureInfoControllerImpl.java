@@ -2,6 +2,7 @@ package com.ribeiro.gallery.controller.impl;
 
 import com.ribeiro.gallery.api.PictureInfo;
 import com.ribeiro.gallery.controller.api.PictureInfoController;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,6 +15,7 @@ public class PictureInfoControllerImpl implements PictureInfoController {
     private static final String REST_MAPPING_PICTURES = "/pictures";
 
     @RequestMapping(REST_MAPPING_PICTURES)
+    @CrossOrigin(origins = "*")
     public List<PictureInfo> getPicturesInfoList() {
         //TODO: This was temporarily hardcoded, just to test it out
         PictureInfo pictureInfo1 = new PictureInfo();
