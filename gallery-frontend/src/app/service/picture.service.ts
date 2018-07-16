@@ -12,8 +12,8 @@ export class PictureService {
 
   }
 
-  getPictures(): Observable<PictureInfo[]> {
-    let url: string = `${environment.restUrl}/rest/pictures`;
+  getPictures(page: number, size: number): Observable<PictureInfo[]> {
+    let url: string = `${environment.restUrl}/rest/pictures?page=${page}&size=${size}`;
     return this.http.get<PictureInfo[]>(url);
   }
 

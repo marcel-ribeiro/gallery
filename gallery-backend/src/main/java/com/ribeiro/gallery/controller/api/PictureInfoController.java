@@ -1,6 +1,7 @@
 package com.ribeiro.gallery.controller.api;
 
 import com.ribeiro.gallery.api.PictureInfo;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -13,5 +14,5 @@ public interface PictureInfoController {
      *
      * @return List<PictureInfo>
      */
-    List<PictureInfo> getPicturesInfoList();
+    List<PictureInfo> getPicturesInfoList(@RequestParam("page") int page, @RequestParam("size") int size);
 }

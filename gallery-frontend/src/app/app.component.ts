@@ -10,6 +10,9 @@ import {PictureService} from "./service/picture.service";
 export class AppComponent implements OnInit {
   title: string;
   pictures: PictureInfo[];
+  page: number;
+  size: number;
+  isThereMore: boolean;
 
   constructor(private pictureService: PictureService) {
 
@@ -17,12 +20,21 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.title = 'Picture Gallery App!';
-    this.setPictures();
+    this.isThereMore = true;
+    this.page = 0;
+    this.size = 5;
+    this.pictures = [];
+    this.displayMore();
   }
 
   setPictures(): void {
-    this.pictureService.getPictures().subscribe((pictures: PictureInfo[]) => {
-      this.pictures = pictures;
+    this.pictureService.getPictures(this.page, this.size).subscribe((pictures: PictureInfo[]) => {
+      this.pictures.push(...pictures);
     });
+  }
+
+  displayMore(): void {
+    this.page++;
+    this.setPictures();
   }
 }

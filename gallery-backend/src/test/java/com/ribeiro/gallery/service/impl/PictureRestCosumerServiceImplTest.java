@@ -7,6 +7,7 @@ import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
+import org.mockito.Spy;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
@@ -20,6 +21,7 @@ import static org.mockito.Mockito.verify;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class PictureRestCosumerServiceImplTest {
+    @Spy
     @InjectMocks
     private PictureRestCosumerServiceImpl pictureRestCosumerService;
 
