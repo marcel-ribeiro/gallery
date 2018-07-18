@@ -17,14 +17,15 @@ All the code for this microservice lives in the **gallery-backend** module.
 The REST endpoints exposed by this module will be always preceeded by `/rest`, 
 and the proper API documentation is available via [Swagger UI](http://localhost:8080/rest/swagger-ui.html)
 
-- Running: `mvn spring-boot:run`
+- Running:  `cd gallery-backend` && `mvn spring-boot:run`
 - REST API documentation: [Swagger UI](http://localhost:8080/rest/swagger-ui.html)
 
 ##gallery-frontend
 Angular 6 app that provides a nice UI to visualize the pictures gallery
 
 - Pre-requisites:
+    - NodeJs: [Install NodeJs](https://nodejs.org/en/download/)
     - Angular cli: `npm install -g @angular/cli`
-- Building: `cd gallery-frontend` &&  `npm install` && `npm run build` &&  `cd ..` &&  `mvn install`
-- Running: `npm run start`
+- Building: `cd gallery-frontend` &&  `npm i` && `npm run build`
+- Running: `npm start`
 
